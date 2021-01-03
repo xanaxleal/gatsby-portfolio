@@ -3,10 +3,12 @@ import Header from "../components/Header";
 import SEO from "../components/SEO";
 
 const IndexLayout = (props) => (
-    <div>
+    <div className="home-container">
         <SEO />
-        <Header />
-        <main className="home-container">
+        <Header 
+            fromIndex = "true"
+        />
+        <main id="index-main">
             <nav className="navigation menu__row" id="1">
             <li className="menu__item text">Type</li>
             <li className="menu__item text">Client</li>
