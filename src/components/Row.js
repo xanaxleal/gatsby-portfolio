@@ -15,23 +15,25 @@ const Row = (props) => {
     }
     let last_known_scroll_position = 0;
     let ticking = false;
-
-    function handleScroll(scroll_pos) {
-        document.querySelector('main').style.backgroundPositionY = (scroll_pos - document.querySelector('.header').offsetHeight) + "px";
-    }
-
-    window.addEventListener('scroll', function(e) {
-    last_known_scroll_position = window.scrollY;
-
-    if (!ticking) {
-        window.requestAnimationFrame(function() {
-        handleScroll(last_known_scroll_position);
-        ticking = false;
+    if (typeof window !== `undefined`) {
+        function handleScroll(scroll_pos) {
+            document.querySelector('main').style.backgroundPositionY = (scroll_pos - document.querySelector('.header').offsetHeight) + "px";
+        }
+    
+        window.addEventListener('scroll', function(e) {
+        last_known_scroll_position = window.scrollY;
+    
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+            handleScroll(last_known_scroll_position);
+            ticking = false;
+            });
+    
+            ticking = true;
+        }
         });
-
-        ticking = true;
     }
-    });
+    
     
     return <article
     onMouseEnter={bgShow}

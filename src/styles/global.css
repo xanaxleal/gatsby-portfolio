@@ -63,7 +63,7 @@ a {
 
   grid-template-columns: 2fr 4fr repeat(2, 1fr);
   align-items: center;
-  transition: opacity 0.5s;
+  transition: all 0.5s;
 }
 
 .menu__row p:last-child {
@@ -112,7 +112,6 @@ main {
 }
 
 .container__img {
-  background-image: url('/img/coam-book-0.jpg');
   background-size: cover;
   background-position: center;
 }
