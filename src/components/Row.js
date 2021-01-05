@@ -25,7 +25,7 @@ class Row extends React.Component {
     }
     render () {
         function bgShow (event){
-            event.target.parentElement.parentElement.style.backgroundImage = `url("../img/${event.target.dataset.image}")`;
+            event.target.parentElement.parentElement.style.backgroundImage = `url("${event.target.dataset.image}")`;
             Array.from(event.target.parentElement.parentElement.children).forEach(el => el.classList.add('transparent'));
             event.target.parentElement.classList.remove('transparent');
             event.target.parentElement.style.borderTop = '1px solid white';

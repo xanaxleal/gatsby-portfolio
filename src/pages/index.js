@@ -5,7 +5,7 @@ import Row from "../components/Row";
 
 export default ({data}) => {
   const imgs = [];
-  data.allFile.edges.forEach((el) => imgs.push(el.node.base))
+  data.allFile.edges.forEach((el) => imgs.push(el.node.publicURL))
   const imgsName = [];
   data.allFile.nodes.forEach((el) => imgsName.push(el.name))
 
@@ -48,10 +48,12 @@ export let query = graphql `
       base
       ext
       name
+      publicURL
     }
     edges {
       node {
         base
+        publicURL
       }
     }
   }
