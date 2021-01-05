@@ -9,6 +9,15 @@
   #project__intro {
     width: 50%;
   }
+
+  .project__details_description p {
+    margin-bottom: 1em;
+  }
+
+  .project__details_description p:last-child {
+    margin-bottom: 0em;
+  }
+
   
 
   @media only screen and (max-width: 37.5rem) {
@@ -19,7 +28,7 @@
       border-bottom: 1px solid #fff;
       grid-gap: 2rem;
     }
-    .project__details-description {
+    .project__details_description {
       grid-column: 1 / span 2;
     }
   
@@ -33,7 +42,7 @@
       border-bottom: 1px solid #fff;
       grid-gap: 2rem;
     }
-    .project__details-description {
+    .project__details_description {
       grid-column: 1 / span 2;
     }
   }
@@ -46,7 +55,7 @@
       border-bottom: 1px solid #fff;
       grid-gap: 2rem;
     }
-    .project__details-description {
+    .project__details_description {
       grid-column: 1 / span 2;
     }
   
@@ -60,7 +69,7 @@
       border-bottom: 1px solid #fff;
       grid-gap: 2rem;
     }
-    .project__details-description {
+    .project__details_description {
       grid-column: 1 / span 2;
     }
   }
