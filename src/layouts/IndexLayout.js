@@ -1,9 +1,16 @@
 import React from "react";
+import { motion } from 'framer-motion'
+
 import Header from "../components/Header";
 import SEO from "../components/SEO";
 
+
 const IndexLayout = (props) => (
-    <div className="home-container">
+    <motion.div className="home-container"
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{delay: 3.2}}
+    >
         <SEO />
         <Header 
             fromIndex = "true"
@@ -20,7 +27,7 @@ const IndexLayout = (props) => (
         <div id="container">
             <canvas id="canvas"></canvas>
         </div>
-     </div>
+     </motion.div>
 );
 
 export default IndexLayout;

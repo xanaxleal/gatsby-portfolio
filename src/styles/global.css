@@ -175,7 +175,7 @@ main {
     }
   }
   
-  @media only screen and (max-width: 667px) and (orientation: portrait) {
+  @media only screen and (max-width: 37.5rem) and (orientation: portrait) {
     .header {
       grid-template-columns: 2fr 7fr;
       align-items: flex-start;

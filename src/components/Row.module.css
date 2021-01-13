@@ -21,7 +21,7 @@
   }
   
   
-  @media only screen and (max-width: 37.5rem) {
+  @media only screen and (max-width: 52.5rem) {
     .menu__row {
       grid-template-columns: 2fr 6fr 1fr;
       align-items: center;
@@ -48,7 +48,7 @@
     }
   }
   
-  @media only screen and (max-width: 667px) and (orientation: portrait) {
+  @media only screen and (max-width: 52.5rem) and (orientation: portrait) {
     .menu__row {
       grid-template-columns: 2fr 6fr 1fr;
       align-items: center;

@@ -1,15 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import {graphql} from "gatsby"
+
 import IndexLayout from "../layouts/IndexLayout";
 import Row from "../components/Row";
+import Loader from "../components/Loader";
 
 export default ({data}) => {
+  const [showLoader, setShowLoader] = useState(true);
   const imgs = [];
   data.allFile.edges.forEach((el) => imgs.push(el.node.publicURL))
   const imgsName = [];
   data.allFile.nodes.forEach((el) => imgsName.push(el.name))
+  setInterval(()=>{setShowLoader(false)}, 3200)
 
   return (
+    <div>
+    {showLoader && (<Loader />)}
     <IndexLayout>
       {data.allMarkdownRemark.nodes.map((node) => (
         <Row 
@@ -24,6 +30,7 @@ export default ({data}) => {
         </Row>
       ))}
     </IndexLayout>
+    </div>
   )
 }
 
