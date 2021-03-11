@@ -1,13 +1,15 @@
 @font-face {
   font-family: "Vaud";
-  src: url("/fonts/Vaud_Bold.woff2") format("woff2"); /* Modern Browsers */
+  src: url("/fonts/Vaud_Bold.woff2") format("woff2"), /* Modern Browsers */
+  url("/fonts/Vaud_Bold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Vaud";
-  src: url("/fonts/Vaud_Light.woff2") format("woff2"); /* Modern Browsers */
+  src: url("/fonts/Vaud_Light.woff2") format("woff2"), /* Modern Browsers */
+  url("/fonts/Vaud_Light.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -117,7 +119,7 @@ main {
 }
 
 .container__img {
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 
